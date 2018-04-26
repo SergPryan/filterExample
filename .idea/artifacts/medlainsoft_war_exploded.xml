@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="medlainsoft:war exploded">
+    <output-path>$PROJECT_DIR$/target/medlainsoft</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="medlainsoft" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" />
+          <element id="library" level="project" name="Maven: postgresql:postgresql:9.1-901.jdbc4" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/medlainsoft/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="medlainsoft/web/Web" />
+    </root>
+  </artifact>
+</component>
