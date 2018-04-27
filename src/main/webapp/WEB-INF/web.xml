@@ -6,7 +6,7 @@
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
     <servlet-name>part</servlet-name>
-    <servlet-class>com.PartServlet</servlet-class>
+    <servlet-class>com.servlet.PartServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>part</servlet-name>

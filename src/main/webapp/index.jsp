@@ -1,36 +1,38 @@
 <html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
 
 <div ng-app="partApp" ng-controller="appCtrl">
-    <label> PN
-        <input type="text" ng-model="number">
-    </label> <br>
+    <table class="filter-table">
+        <tr>
+            <td>PN</td>
+            <td > <input type="text" ng-model="number"></td>
+        </tr>
+        <tr>
+            <td>Part Name</td>
+            <td > <input type="text" ng-model="name"></td>
+        </tr>
+        <tr>
+            <td>Vendor</td>
+            <td > <input type="text" ng-model="vendor"></td>
+        </tr>
+        <tr>
+            <td>Qty</td>
+            <td > <input type="text" ng-model="qty"></td>
+        </tr>
+        <tr>
+            <td>Shipped</td>
+            <td>after <input type="date" ng-model="shippedAfter"> before  <input type="date" ng-model="shippedBefore"></td>
+        </tr>
+        <tr>
+            <td>Received</td>
+            <td>after  <input type="date" ng-model="receivedAfter"> before  <input type="date" ng-model="receivedBefore"></td>
+        </tr>
+    </table>
 
-    <label> Part Name
-        <input type="text" ng-model="name">
-    </label> <br>
-
-    <label> Vendor
-        <input type="text" ng-model="vendor">
-    </label> <br>
-
-    <label> Qty
-        <input type="text" ng-model="qty">
-    </label> <br>
-    Shipped <label> after
-    <input type="date" ng-model="shippedAfter">
-</label>
-    <label> before
-        <input type="date" ng-model="shippedBefore">
-    </label> <br>
-    Received <label> after
-    <input type="date" ng-model="receivedAfter">
-</label>
-    <label> before
-        <input type="date" ng-model="receivedBefore">
-    </label> <br>
-
-    <button type="button" ng-click="filter()">Filter</button>
+    <button class="filter" type="button" ng-click="filter()">Filter</button>
 
     <table border="1">
         <tr>
@@ -46,8 +48,8 @@
             <td>{{part.name}}</td>
             <td>{{part.vendor}}</td>
             <td>{{part.qty}}</td>
-            <td>{{part.shipped}}</td>
-            <td>{{part.received}}</td>
+            <td>{{part.shipped | date : 'longDate'}}</td>
+            <td>{{part.received | date : 'longDate'}}</td>
         </tr>
 
     </table>

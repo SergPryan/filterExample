@@ -54,12 +54,10 @@ app.controller('appCtrl', function($scope,$http,$filter, Utils){
 });
 
 app.factory('Utils', function() {
-    var service = {
-        isUndefinedOrNull: function(obj) {
-            return !angular.isDefined(obj) || obj==null;
+    return {
+        isUndefinedOrNull: function (obj) {
+            return !angular.isDefined(obj) || obj == null;
         }
 
-    }
-
-    return service;
+    };
 });
